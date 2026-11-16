@@ -1,0 +1,402 @@
+gesture2spec: 200 inputs and outputs, from real runs (io/ios.pl has the same as Prolog facts).
+
+1. recognise([d,d,l])
+   => filter
+2. distance([r,r,u], [l,u,d,l])
+   => 4
+3. spec([[u,d,r,r]])
+   => [map]
+4. recognise_any([r])
+   => sort
+5. recognise([u,l,d,d])
+   => undo
+6. distance([], [u,u,r])
+   => 3
+7. spec([[u,l,d,d],[d,d,l],[u,d,l],[u,l,r,r]])
+   => [undo,filter,filter,map]
+8. recognise_any([r,l,l,r,r])
+   => reverse
+9. recognise([r,r,d])
+   => sort
+10. distance([l,l,l,d], [l,d,d,u])
+   => 3
+11. spec([[r,r,d],[d,d,l]])
+   => [sort,filter]
+12. recognise_any([])
+   => sort
+13. recognise([u,u,u])
+   => run
+14. distance([l,d,u], [d,u,d])
+   => 2
+15. spec([[r,r,r],[u,l,d,d],[u,d,r,r],[l,l,r]])
+   => [sort,undo,map,reverse]
+16. recognise_any([u,r,r])
+   => map
+17. recognise([u,l,d,d])
+   => undo
+18. distance([u,u,d,r], [u])
+   => 3
+19. spec([[u,d,r,r],[d,d,l],[u,d,u,d],[l,l,r]])
+   => [map,filter,run,reverse]
+20. recognise_any([u,u,u,l,l])
+   => run
+21. recognise([d,d,l])
+   => filter
+22. distance([d,l], [u,r])
+   => 2
+23. spec([[d,d,l],[u,u,u],[l,l,r]])
+   => [filter,run,reverse]
+24. recognise_any([d])
+   => sort
+25. recognise([d,d,l])
+   => filter
+26. distance([u,d,u,r,u,l], [r,r,l])
+   => 4
+27. spec([[d,l,d]])
+   => [sort]
+28. recognise_any([u,l,u,r,r,u])
+   => run
+29. recognise([l,l,l])
+   => reverse
+30. distance([r,u,d,d,d], [d,r])
+   => 4
+31. spec([[r,r,l],[r,r,d]])
+   => [sort,sort]
+32. recognise_any([])
+   => sort
+33. recognise([u,l,d,d])
+   => undo
+34. distance([l,l,l,l], [r,l,u,d])
+   => 3
+35. spec([[d,d,l],[l,l,r],[d,d,l],[u,u,u]])
+   => [filter,reverse,filter,run]
+36. recognise_any([l,u,r,d,r,r])
+   => map
+37. recognise([r,r,d])
+   => sort
+38. distance([], [d,r,u,d])
+   => 4
+39. spec([[l,l,r],[d,d,l],[u,d,r,r],[l,l,r]])
+   => [reverse,filter,map,reverse]
+40. recognise_any([d,r,d,r,r,d])
+   => sort
+41. recognise([u,l,d,d])
+   => undo
+42. distance([u,l,d], [u,r,l,d,d,l])
+   => 3
+43. spec([[u,u,u],[l,l,r],[u,l,d,d]])
+   => [run,reverse,undo]
+44. recognise_any([d,d,u,u,r,u])
+   => run
+45. recognise([l,l,l])
+   => reverse
+46. distance([d,d], [r,u,u,r,u,l])
+   => 6
+47. spec([[d,d,l],[d,d,l],[d,d,l]])
+   => [filter,filter,filter]
+48. recognise_any([l,r,d,u,r])
+   => sort
+49. recognise([u,u,u])
+   => run
+50. distance([u,u,r,u,d], [l])
+   => 5
+51. spec([[d,d,l],[r,r,d],[r,r,d]])
+   => [filter,sort,sort]
+52. recognise_any([])
+   => sort
+53. recognise([l,l,r])
+   => reverse
+54. distance([r,r,d,l,l,r], [d,d,r,r])
+   => 4
+55. spec([[u,d,r,r],[d,d,l],[u,l,d,d]])
+   => [map,filter,undo]
+56. recognise_any([d])
+   => sort
+57. recognise([u,l,d,l])
+   => undo
+58. distance([l,d,r,l,r], [d,u,d,u,d,d])
+   => 5
+59. spec([[l,l,r],[d,d,r],[d,d,l]])
+   => [reverse,filter,filter]
+60. recognise_any([])
+   => sort
+61. recognise([u,d,r,r])
+   => map
+62. distance([d,r,u], [r,d])
+   => 2
+63. spec([[d,d,l],[d,d,l],[u,l,l,r],[r,r,d]])
+   => [filter,filter,reverse,sort]
+64. recognise_any([d,r,r,d,l])
+   => sort
+65. recognise([r,r,d])
+   => sort
+66. distance([], [r])
+   => 1
+67. spec([[u,u,u],[r,r,d],[u,u,u]])
+   => [run,sort,run]
+68. recognise_any([l,r,l])
+   => sort
+69. recognise([r,r,d])
+   => sort
+70. distance([u,r,l,u], [r,l,u,l])
+   => 2
+71. spec([[l,l,r],[r,r,d],[d,d,u]])
+   => [reverse,sort,filter]
+72. recognise_any([r,d,r,r,u,r])
+   => map
+73. recognise([r,r,d])
+   => sort
+74. distance([d,r,l,u,r], [u])
+   => 4
+75. spec([[u,d,r,r],[r,r,d],[r,r,d]])
+   => [map,sort,sort]
+76. recognise_any([l,d,u,u,d,d])
+   => undo
+77. recognise([u,u,u,r])
+   => run
+78. distance([], [u,u,r])
+   => 3
+79. spec([[d,d,l],[r,r,d],[u,l,d,d],[u,d,r,r]])
+   => [filter,sort,undo,map]
+80. recognise_any([l,r,r,l])
+   => sort
+81. recognise([l,l,r])
+   => reverse
+82. distance([d,l], [r,d,l,d])
+   => 2
+83. spec([[d,d,l],[u,u,u]])
+   => [filter,run]
+84. recognise_any([u])
+   => run
+85. recognise([u,r,d,d])
+   => undo
+86. distance([], [d,l,l,l,l])
+   => 5
+87. spec([[l,l,r],[d,d,l],[u,d,r,u],[d,d,l]])
+   => [reverse,filter,map,filter]
+88. recognise_any([])
+   => sort
+89. recognise([r,l,d,d])
+   => undo
+90. distance([u], [u,r,l,r,u])
+   => 4
+91. spec([[u,d,r,r],[u,d,r,r]])
+   => [map,map]
+92. recognise_any([l,d])
+   => sort
+93. recognise([d,d,l])
+   => filter
+94. distance([d,l,d,r], [d,d])
+   => 2
+95. spec([[u,l,d,d],[u,d,r,r],[u,d,r,r]])
+   => [undo,map,map]
+96. recognise_any([l,r,d,u])
+   => sort
+97. recognise([u,d,r,r])
+   => map
+98. distance([l,u], [d,d,l,d])
+   => 3
+99. spec([[u,l,u],[d,d,l],[l,l,r]])
+   => [run,filter,reverse]
+100. recognise_any([r,d,r,l])
+   => sort
+101. recognise([l,l,r])
+   => reverse
+102. distance([], [])
+   => 0
+103. spec([[d,d,l]])
+   => [filter]
+104. recognise_any([r,u,d])
+   => sort
+105. recognise([u,r,d])
+   => sort
+106. distance([l,r,d,u,u,r], [l,d,d,d])
+   => 4
+107. spec([[l,l,r]])
+   => [reverse]
+108. recognise_any([r,u,l,d,r])
+   => undo
+109. recognise([u,u,u])
+   => run
+110. distance([r], [l,r,d,r,d,l])
+   => 5
+111. spec([[r,r,d]])
+   => [sort]
+112. recognise_any([l,d,d,u,u,l])
+   => filter
+113. recognise([u,l,d,d])
+   => undo
+114. distance([], [d,d,r])
+   => 3
+115. spec([[l,l,r],[r,r,d]])
+   => [reverse,sort]
+116. recognise_any([u,r,r])
+   => map
+117. recognise([r,r,d])
+   => sort
+118. distance([r,r], [r,r,l,r,r,l])
+   => 4
+119. spec([[l,l,r],[u,u,u],[r,d,r,r]])
+   => [reverse,run,map]
+120. recognise_any([])
+   => sort
+121. recognise([u,l,d,d])
+   => undo
+122. distance([u,u,d], [l,u,d])
+   => 1
+123. spec([[u,d,r,r]])
+   => [map]
+124. recognise_any([l,d,r,r,l])
+   => map
+125. recognise([r,r,d])
+   => sort
+126. distance([u,u,u,d,d], [d,l])
+   => 4
+127. spec([[u,d,r,r]])
+   => [map]
+128. recognise_any([])
+   => sort
+129. recognise([u,u,u])
+   => run
+130. distance([u,d,d], [r,d])
+   => 2
+131. spec([[d,d,l],[r,r,d]])
+   => [filter,sort]
+132. recognise_any([d,d,d,r,r])
+   => map
+133. recognise([u,l,u,d])
+   => undo
+134. distance([r,d], [d])
+   => 1
+135. spec([[u,u,u]])
+   => [run]
+136. recognise_any([l,r,r,u,d])
+   => sort
+137. recognise([u,r,d])
+   => sort
+138. distance([u], [d,l,d,u])
+   => 3
+139. spec([[u,u,u],[d,d,l]])
+   => [run,filter]
+140. recognise_any([l,u,r,d])
+   => sort
+141. recognise([r,r,d])
+   => sort
+142. distance([r,d,u], [d,u,d,l,d,r])
+   => 5
+143. spec([[l,l,r],[u,l,d,d],[r,r,d],[u,u,u]])
+   => [reverse,undo,sort,run]
+144. recognise_any([d,r,r,r])
+   => sort
+145. recognise([u,u,l])
+   => run
+146. distance([u,r,r,r,r,d], [r,d,l,u])
+   => 5
+147. spec([[u,u,u],[u,d,r,r],[u,d,r,r],[d,d,l]])
+   => [run,map,map,filter]
+148. recognise_any([])
+   => sort
+149. recognise([u,l,d,d])
+   => undo
+150. distance([u,l,l,u,d], [u,l])
+   => 3
+151. spec([[u,l,d,d]])
+   => [undo]
+152. recognise_any([r,r,d,u,l,d])
+   => sort
+153. recognise([r,r,d])
+   => sort
+154. distance([u,u,l,u,u], [d,r,l,d,d,u])
+   => 4
+155. spec([[r,r,d],[r,r,d],[l,l,l],[d,l,r]])
+   => [sort,sort,reverse,reverse]
+156. recognise_any([u])
+   => run
+157. recognise([r,u,l])
+   => sort
+158. distance([d], [d,d,u,d,r])
+   => 4
+159. spec([[u,r,u],[l,l,u],[u,d,r,d],[u,r,r,r]])
+   => [run,reverse,map,map]
+160. recognise_any([u])
+   => run
+161. recognise([u,u,u])
+   => run
+162. distance([l,u], [l])
+   => 1
+163. spec([[r,r,d],[d,d,l],[r,r,d],[u,d,r,r]])
+   => [sort,filter,sort,map]
+164. recognise_any([])
+   => sort
+165. recognise([u,l,d,d])
+   => undo
+166. distance([], [u,u,l,l])
+   => 4
+167. spec([[u,l,d,d],[u,l,d,d],[u,u,u]])
+   => [undo,undo,run]
+168. recognise_any([l,u,r,u,r,l])
+   => sort
+169. recognise([l,l,r])
+   => reverse
+170. distance([u,r,d,u,r,r], [d,r,u,u])
+   => 4
+171. spec([[r,r,d],[u,d,r,r]])
+   => [sort,map]
+172. recognise_any([r])
+   => sort
+173. recognise([l,l,r])
+   => reverse
+174. distance([l,u,d,r,l,u], [l,u,l])
+   => 3
+175. spec([[u,l,d,d]])
+   => [undo]
+176. recognise_any([l,l,u,r])
+   => reverse
+177. recognise([r,r,d])
+   => sort
+178. distance([d,l,d,r,d], [d,u,u])
+   => 4
+179. spec([[u,d,r],[u,u,u],[l,l,d,d]])
+   => [map,run,undo]
+180. recognise_any([u,d,r,l,l])
+   => map
+181. recognise([u,u,u])
+   => run
+182. distance([r,r,r], [d,u,r,d,l])
+   => 4
+183. spec([[u,l,d,d]])
+   => [undo]
+184. recognise_any([])
+   => sort
+185. recognise([u,u,u])
+   => run
+186. distance([d,r,u,l], [u,d,u,r,r,l])
+   => 3
+187. spec([[d,d,l],[l,l,r],[u,r,u]])
+   => [filter,reverse,run]
+188. recognise_any([d,u,u,r,l,d])
+   => sort
+189. recognise([u,l,d,d])
+   => undo
+190. distance([d,r,r,u,d,d], [d,d,u])
+   => 4
+191. spec([[u,l,d,u],[l,l,r]])
+   => [undo,reverse]
+192. recognise_any([l])
+   => filter
+193. recognise([u,d,r,r])
+   => map
+194. distance([u,r,u,u,r,u], [l,l,r,l,u,l])
+   => 5
+195. spec([[u,d,r,r],[u,d,u,d],[r,r,l],[d,d,l]])
+   => [map,run,sort,filter]
+196. recognise_any([r,r,r,u])
+   => sort
+197. recognise([d,d,l])
+   => filter
+198. distance([r,u,d,l,r], [d,l,l,r])
+   => 3
+199. spec([[u,l,d,d],[u,l,d,d],[d,d,l],[u,u,u]])
+   => [undo,undo,filter,run]
+200. recognise_any([r,u,d,l,r])
+   => map
