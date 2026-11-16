@@ -4,18 +4,19 @@
 % sequence of gestures becomes a sequence of spec steps.
 %?- recognise([r, r, d], C).                 % C = sort
 %?- recognise([r, d], C).                    % one stroke missing: still sort
-%?- spec([[r, r, d], [l, l, u, u], [u, u, u]], S).  % S = [sort, reverse, run]
+%?- spec([[r, r, d], [l, l, r], [u, u, u]], S).     % S = [sort, reverse, run]
 %?- distance([r, r, d], [r, d], D).          % D = 1
 :- module(gesture2spec, [template/2, distance/3, recognise/2, spec/2, separation/1]).
 :- use_module(library(lists)).
 :- use_module(library(apply)).
 
 template(sort, [r, r, d]).
-template(reverse, [l, l, u, u]).
-template(filter, [d, d, l, l]).
-template(map, [u, r, d, r]).
 template(run, [u, u, u]).
-template(undo, [l, d, r, u, l]).
+template(filter, [d, d, l]).
+template(reverse, [l, l, r]).
+template(map, [u, d, r, r]).
+template(undo, [u, l, d, d]).
+% (chosen so every two templates are at least 3 edits apart)
 
 % distance(+A, +B, -D): Levenshtein edit distance (insert, delete or change one stroke), row by row.
 distance(A, B, D) :- length(B, N), numlist(0, N, R0), rows(A, B, 1, R0, R), last(R, D).

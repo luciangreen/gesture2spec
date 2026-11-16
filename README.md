@@ -8,7 +8,7 @@ build specs from DanceStudio gestures. A gesture is a path of strokes (u, d, l, 
 ?- use_module(prolog/gesture2spec).
 ?- recognise([r, r, d], C).                 % C = sort
 ?- recognise([r, d], C).                    % one stroke missing: still sort
-?- spec([[r, r, d], [l, l, u, u], [u, u, u]], S).  % S = [sort, reverse, run]
+?- spec([[r, r, d], [l, l, r], [u, u, u]], S).     % S = [sort, reverse, run]
 ?- distance([r, r, d], [r, d], D).          % D = 1
 ```
 
